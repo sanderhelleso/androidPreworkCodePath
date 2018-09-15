@@ -69,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
                     error.setText("Message can only contain 20 characters!");
                 }
 
+                else if (input.getText().toString().equals("")) {
+                    message.setText("Hello From Sander!");
+                }
+
                 // set text
                 else {
                     error.setText("");
@@ -86,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         rootView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                reset(message, rootView);
+                reset(message, rootView, input);
             }
         });
     }
@@ -98,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // reset app state
-    public void reset(TextView message, View rootView) {
+    public void reset(TextView message, View rootView, EditText input) {
 
         // original values of app
         String originalMessage = "Hello From Sander!";
@@ -106,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
         int originalViewColor = getResources().getColor(R.color.colorGrey);
 
         // set values
+        input.setText("");
         message.setText(originalMessage);
         message.setTextColor(originalTextColor);
         rootView.setBackgroundColor(originalViewColor);
