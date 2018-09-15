@@ -1,15 +1,15 @@
 package com.andoirdpreworkcodepath.sande.androidpreworkcodepath;
 
-import android.content.res.Resources;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Random;
-import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,10 +19,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // message text view
-        final TextView message = (TextView) findViewById(R.id.helloMessage);
+        final TextView message = (TextView)findViewById(R.id.helloMessage);
 
         // root view
         final View rootView = findViewById(R.id.rootView);
+
+        // editor input
+        final EditText input = (EditText)findViewById(R.id.editTextField);
+
+        // error message
+        final TextView error = (TextView)findViewById(R.id.error);
 
         // change text color
         findViewById(R.id.changeTextColorButton).setOnClickListener(new View.OnClickListener() {
@@ -44,7 +50,35 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.changeTextStringButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                message.setText("Hello From Kotten");
+                message.setText("Hello To CodePath!");
+            }
+        });
+
+        // change text string on input
+        input.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                // show error message
+                if (message.length() > 12) {
+                    error.setText("String can only contain 12 characters!");
+                }
+
+                // set text
+                else {
+                    error.setText("");
+                    message.setText(input.getText().toString());
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
             }
         });
 
@@ -68,8 +102,8 @@ public class MainActivity extends AppCompatActivity {
 
         // original values of app
         String originalMessage = "Hello From Sander";
-        int originalTextColor = Color.rgb(0, 0, 0); // black
-        int originalViewColor = Color.rgb(238,238,238); // grey / #eeeeee
+        int originalTextColor = Color.rgb(20, 20, 20); // black
+        int originalViewColor = Color.rgb(238, 238, 238); // grey / #eeeeee
 
         // set values
         message.setText(originalMessage);

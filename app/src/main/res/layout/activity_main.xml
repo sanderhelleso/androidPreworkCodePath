@@ -7,16 +7,27 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/editTextField"
+        android:layout_width="300sp"
+        android:layout_height="100sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:textColor="@android:color/darker_gray"
+        android:hint="type something here and see what happens..."
+        android:textSize="14sp" />
+
     <TextView
         android:id="@+id/helloMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="163dp"
-        android:text="Hello from Sander"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp" />
+        android:layout_marginTop="234dp"
+        android:lineSpacingExtra="14sp"
+        android:text="Hello From Sander"
+        android:textSize="28sp" />
 
     <Button
         android:id="@+id/changeTextColorButton"
@@ -44,4 +55,12 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="96dp"
         android:text="Change View Color" />
+
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextField"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_red_light" />
 </RelativeLayout>
