@@ -4,7 +4,8 @@
 Android app that allows a user to write, modify text and change background/text color of application
 
 ### App Walk-though
-<img src="https://github.com/sanderhelleso/androidPreworkCodePath/blob/master/gif/codePathGif.gif" alt="app gif">
+<img src="https://github.com/sanderhelleso/androidPreworkCodePath/blob/master/gif/codePathGif.gif" alt="app gif" width=200>
+<br>
 
 ### Required User Stories
 - [X] 1. User sees custom text in a label - Hello from {name}!
