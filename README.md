@@ -23,4 +23,4 @@ Android app that allows a user to write, modify text and change background/text 
    - [X] b. User can tap the "Change text string" button to update the label with the text from the text field.  
    - [X] c. If the text field is empty, update label with default text string.  
    - [X] d. If the text field is longer than 20 characters, display error message for user. 
-   - [X] d. If the text field is less than 20 characters, change string text to editor value onchange. 
+   - [X] e. If the text field is less than 20 characters, change string text to editor value onchange. 
