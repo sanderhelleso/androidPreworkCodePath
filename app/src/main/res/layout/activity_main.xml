@@ -5,6 +5,7 @@
     android:id="@+id/rootView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorGrey"
     tools:context=".MainActivity">
 
     <EditText
@@ -26,7 +27,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="234dp"
         android:lineSpacingExtra="14sp"
-        android:text="Hello From Sander"
+        android:text="Hello From Sander!"
+        android:textColor="@color/colorBlack"
         android:textSize="28sp" />
 
     <Button

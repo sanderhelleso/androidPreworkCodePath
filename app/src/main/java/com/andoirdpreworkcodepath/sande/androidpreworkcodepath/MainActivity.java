@@ -64,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                // show error message
-                if (message.length() > 12) {
-                    error.setText("String can only contain 12 characters!");
+                // show error message if true
+                if (input.getText().toString().length() > 20) {
+                    error.setText("Message can only contain 20 characters!");
                 }
 
                 // set text
@@ -101,9 +101,9 @@ public class MainActivity extends AppCompatActivity {
     public void reset(TextView message, View rootView) {
 
         // original values of app
-        String originalMessage = "Hello From Sander";
-        int originalTextColor = Color.rgb(20, 20, 20); // black
-        int originalViewColor = Color.rgb(238, 238, 238); // grey / #eeeeee
+        String originalMessage = "Hello From Sander!";
+        int originalTextColor = getResources().getColor(R.color.colorBlack);
+        int originalViewColor = getResources().getColor(R.color.colorGrey);
 
         // set values
         message.setText(originalMessage);
