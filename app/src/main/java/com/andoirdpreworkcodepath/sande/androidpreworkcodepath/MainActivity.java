@@ -17,11 +17,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // message text view
+        final TextView message = (TextView) findViewById(R.id.helloMessage);
+
         // change text color
         findViewById(R.id.changeTextColorButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((TextView)findViewById(R.id.helloMessage)).setTextColor(getRandomColor());
+                message.setTextColor(getRandomColor());
             }
         });
 
@@ -37,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.changeTextStringButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                message.setText("Hello From Kotten");
             }
         });
     }
